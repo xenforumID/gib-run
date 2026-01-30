@@ -1,0 +1,22 @@
+{
+  "name": "neko-drive",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "cd server && bun run src/index.ts",
+    "server": "cd server && bun run dev",
+    "client": "cd client && bun run dev",
+    "dev": "concurrently \"bun run server\" \"bun run client\"",
+    "install:all": "bun install && cd client && bun install && cd ../server && bun install"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
